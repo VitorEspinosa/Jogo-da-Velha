@@ -1,0 +1,165 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-image: url("./img/imagem\ claro.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Mantém o fundo fixo ao rolar */
+  overflow: hidden;
+    margin-top: 50px;
+    background-color: #fff;
+    color: #333;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    position: relative;
+    min-height: 100vh;
+}
+body.dark-mode {
+    background-image: url(./img/Imagem\ dark.png);
+    background-color: #333;
+    color: #eee;
+}
+h1 {
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+body.dark-mode h1 {
+    color: #eee;
+}
+
+.theme-switch-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+body.dark-mode .theme-switch-container {
+    color: #eee;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+input:checked + .slider {
+    background-color: #2196f3;
+}
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+.slider.round:before {
+    border-radius: 50%;
+}
+.board {
+    display: grid;
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.cell {
+    width: 100px;
+    height: 100px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    cursor: pointer;
+    border: 1px solid #000000;
+    transition: background-color 0.3s ease;
+    color: 0.3s ease, border-color 0.3s ease;
+}
+body.dark-mode .cell {
+    background-color: #555;
+    color: #eee;
+    border-color: #eee;
+} 
+.cell:hover {
+    background-color: #ddd;
+}
+body.dark-mode .cell:hover{
+    background-color: #666;
+}
+#status {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+body.dark-mode #status {
+    color: #eee;
+}
+#resetButton, #startButton {
+    padding: 10px 20px;
+    font-size: 1em;
+    cursor: pointer;
+    margin-bottom: 20px;
+    background-color: #eee;
+    color: #333;
+    border: 1px solid #333;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}
+body.dark-mode #resetButton,
+body.dark-mode #startButton {
+    background-color: #555;
+    color: #000000;
+    border-color: #eee;
+}
+#resetButton:hover, #startButton:hover {
+    background-color: #ddd;
+}
+body.dark-mode #resetButton:hover,
+body.dark-mode #startButton:hover {
+    background-color: #ffffff;
+}
