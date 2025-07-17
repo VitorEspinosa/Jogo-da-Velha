@@ -6,7 +6,7 @@ body {
     margin: 0;
   padding: 0;
   height: 100vh;
-  background-image: url("./img/imagem\ claro.png");
+  background-image: url("./img/imagem_dark.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
