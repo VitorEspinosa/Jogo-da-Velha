@@ -20,7 +20,7 @@ body {
     min-height: 100vh;
 }
 body.dark-mode {
-    background-image: url("../img/imagemdark.png");
+    background-image: url("./img/imagemdark.png");
     background-color: #333;
     color: #eee;
 }
